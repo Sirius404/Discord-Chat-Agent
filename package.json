@@ -1,0 +1,38 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "mocha 'tests/**/*.test.js'",
+    "test:unit": "mocha 'tests/unit/**/*.test.js'",
+    "test:integration": "mocha 'tests/integration/**/*.test.js'",
+    "test:performance": "mocha 'tests/performance/**/*.test.js'",
+    "test:coverage": "nyc --reporter=html --reporter=text mocha 'tests/**/*.test.js'"
+  },
+  "dependencies": {
+    "@dqbd/tiktoken": "^1.0.20",
+    "axios": "^1.7.9",
+    "chromadb": "^1.10.4",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.13.5",
+    "jest": "^29.7.0",
+    "node-schedule": "^2.1.1",
+    "openai": "^4.82.0",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "babel-jest": "^29.7.0",
+    "chai": "^4.3.7",
+    "http2-debug": "^1.2.1",
+    "mocha": "^10.8.2",
+    "nyc": "^15.1.0",
+    "sinon": "^15.2.0"
+  }
+}

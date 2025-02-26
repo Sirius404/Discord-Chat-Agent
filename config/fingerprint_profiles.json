@@ -1,0 +1,37 @@
+[
+    {
+      "name": "chrome_macos_advanced",
+      "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-27-43-65037-13-23-17613-0-11-5-16-35-45-18-51-10,4588-29-23-24,0",
+      "http2": {
+        "headerOrder": [
+          ":method", ":authority", ":scheme", ":path", 
+          "user-agent", "accept", "accept-language", 
+          "accept-encoding", "cache-control", "cookie"
+        ],
+        "settings": {
+          "HEADER_TABLE_SIZE": 65536,
+          "ENABLE_PUSH": false,
+          "MAX_CONCURRENT_STREAMS": 1000,
+          "INITIAL_WINDOW_SIZE": 6291456,
+          "MAX_HEADER_LIST_SIZE": 262144
+        } ,
+        "windowUpdate": 15663105
+      },
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
+        "Sec-CH-UA": "\"Google Chrome\";v=\"117\", \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"117\"",
+        "Sec-CH-UA-Platform": "\"Windows\""
+      },
+      "proxy": "socks5://user:pass@us1.proxy.com:1080",
+      "tls": {
+        "ciphers": [
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_CHACHA20_POLY1305_SHA256"
+        ],
+        "extensions": [
+          {"name": "server_name", "value": "discord.com"},
+          {"name": "supported_versions", "value": "TLSv1.3"}
+        ]
+      }
+    }
+  ]

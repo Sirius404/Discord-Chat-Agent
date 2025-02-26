@@ -1,0 +1,32 @@
+# 依赖目录
+/node_modules
+/coverage
+/cache
+
+# 配置文件
+config.json
+.env
+*.log
+
+# IDE文件
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 测试文件
+/coverage
+/.nyc_output
+
+# 临时文件
+*.tmp
+*.temp
+
+# 私密文件
+/fingerprints/private
+/tokens.json
+/proxies.txt

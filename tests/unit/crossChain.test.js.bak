@@ -1,0 +1,25 @@
+const { crossChainToken } = require('../../src/features/crossChain');
+const { ethers } = require('ethers');
+
+jest.mock('ethers');
+jest.mock('kayerzero-oft');
+
+describe('crossChainToken', () => {
+  it('should successfully perform cross-chain transfer', async () => {
+    const mockTx = { wait: jest.fn().mockResolvedValue(true) };
+    const mockOFT = { crossChainTransfer: jest.fn().mockResolvedValue(mockTx) };
+    require('kayerzero-oft').OFT.mockImplementation(() => mockOFT);
+
+    await crossChainToken('0xTokenAddress', 1, '100');
+
+    expect(mockOFT.crossChainTransfer).toHaveBeenCalledWith(1, '100');
+    expect(mockTx.wait).toHaveBeenCalled();
+  });
+
+  it('should handle cross-chain transfer failure', async () => {
+    const mockOFT = { crossChainTransfer: jest.fn().mockRejectedValue(new Error('Transfer failed')) };
+    require('kayerzero-oft').OFT.mockImplementation(() => mockOFT);
+
+    await expect(crossChainToken('0xTokenAddress', 1, '100')).rejects.toThrow('Transfer failed');
+  });
+});

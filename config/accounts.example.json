@@ -1,0 +1,34 @@
+{
+  "accounts": [
+    {
+      "id": "account1",
+      "token": "your-discord-token",
+      "activityPattern": {
+        "hours": "11-19",
+        "daysOfWeek": "1-5",
+        "timezone": "Asia/Shanghai"
+      },
+      "tls": {
+        "ciphers": ["TLS_AES_128_GCM_SHA256"]
+      },
+      "channels": [
+        {
+          "id": "channel-id",
+          "name": "general",
+          "topic": "日常聊天",
+          "schedule": {
+            "messageDelay": {
+              "min": 300000,
+              "max": 600000
+            },
+            "nextExecutionDelay": {
+              "min": 900000,
+              "max": 1800000
+            }
+          }
+        }
+      ],
+      "fingerprint": "chrome_macos_advanced"
+    }
+  ]
+}
